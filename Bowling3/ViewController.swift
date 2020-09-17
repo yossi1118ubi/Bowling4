@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBAction func blogButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "goBlog", sender: nil)
     }
     
     @IBAction func spreadSheetButton(_ sender: Any) {
@@ -28,6 +29,5 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
 }
 
