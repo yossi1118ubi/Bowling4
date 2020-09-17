@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func bowlingAlleyButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "goBowlingAlley", sender: nil)
     }
     
     override func viewDidLoad() {

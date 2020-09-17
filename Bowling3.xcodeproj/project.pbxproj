@@ -18,9 +18,13 @@
 		CF085E542512F3E7006F3B55 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF085E532512F3E7006F3B55 /* DetailViewController.swift */; };
 		CF085E562512F981006F3B55 /* SpreadSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF085E552512F981006F3B55 /* SpreadSheetViewController.swift */; };
 		CF974EC025130376000158F7 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF974EBF25130376000158F7 /* BlogViewController.swift */; };
+		CF974EC2251316A3000158F7 /* BusinessHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF974EC1251316A3000158F7 /* BusinessHoursViewController.swift */; };
+		D82F5BAD1F5E0367389DCB47 /* Pods_Bowling3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5B01B33954135F85B7A5C2 /* Pods_Bowling3.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A439573DDC3B1524DDB42925 /* Pods-Bowling3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bowling3.debug.xcconfig"; path = "Target Support Files/Pods-Bowling3/Pods-Bowling3.debug.xcconfig"; sourceTree = "<group>"; };
+		AE5B01B33954135F85B7A5C2 /* Pods_Bowling3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bowling3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF085E382512E980006F3B55 /* Bowling3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bowling3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF085E3B2512E980006F3B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF085E3D2512E980006F3B55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		CF085E532512F3E7006F3B55 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CF085E552512F981006F3B55 /* SpreadSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadSheetViewController.swift; sourceTree = "<group>"; };
 		CF974EBF25130376000158F7 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
+		CF974EC1251316A3000158F7 /* BusinessHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessHoursViewController.swift; sourceTree = "<group>"; };
+		D267A17523C068529EF4D55C /* Pods-Bowling3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bowling3.release.xcconfig"; path = "Target Support Files/Pods-Bowling3/Pods-Bowling3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82F5BAD1F5E0367389DCB47 /* Pods_Bowling3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10D69D095CE5B81D814E7954 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE5B01B33954135F85B7A5C2 /* Pods_Bowling3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		111999CA4FC2C6FD9066273D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A439573DDC3B1524DDB42925 /* Pods-Bowling3.debug.xcconfig */,
+				D267A17523C068529EF4D55C /* Pods-Bowling3.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CF085E2F2512E980006F3B55 = {
 			isa = PBXGroup;
 			children = (
 				CF085E3A2512E980006F3B55 /* Bowling3 */,
 				CF085E392512E980006F3B55 /* Products */,
+				111999CA4FC2C6FD9066273D /* Pods */,
+				10D69D095CE5B81D814E7954 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +105,7 @@
 				CF085E532512F3E7006F3B55 /* DetailViewController.swift */,
 				CF085E552512F981006F3B55 /* SpreadSheetViewController.swift */,
 				CF974EBF25130376000158F7 /* BlogViewController.swift */,
+				CF974EC1251316A3000158F7 /* BusinessHoursViewController.swift */,
 			);
 			path = Bowling3;
 			sourceTree = "<group>";
@@ -89,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF085E4C2512E982006F3B55 /* Build configuration list for PBXNativeTarget "Bowling3" */;
 			buildPhases = (
+				1ACDAED7C57EF357F65E371F /* [CP] Check Pods Manifest.lock */,
 				CF085E342512E980006F3B55 /* Sources */,
 				CF085E352512E980006F3B55 /* Frameworks */,
 				CF085E362512E980006F3B55 /* Resources */,
+				DC4E8A5CFB1776892874AAFA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +178,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1ACDAED7C57EF357F65E371F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bowling3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC4E8A5CFB1776892874AAFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bowling3/Pods-Bowling3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bowling3/Pods-Bowling3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bowling3/Pods-Bowling3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF085E342512E980006F3B55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -159,6 +231,7 @@
 				CF085E542512F3E7006F3B55 /* DetailViewController.swift in Sources */,
 				CF085E562512F981006F3B55 /* SpreadSheetViewController.swift in Sources */,
 				CF085E3C2512E980006F3B55 /* AppDelegate.swift in Sources */,
+				CF974EC2251316A3000158F7 /* BusinessHoursViewController.swift in Sources */,
 				CF974EC025130376000158F7 /* BlogViewController.swift in Sources */,
 				CF085E3E2512E980006F3B55 /* SceneDelegate.swift in Sources */,
 			);
@@ -302,6 +375,7 @@
 		};
 		CF085E4D2512E982006F3B55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A439573DDC3B1524DDB42925 /* Pods-Bowling3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -320,6 +394,7 @@
 		};
 		CF085E4E2512E982006F3B55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D267A17523C068529EF4D55C /* Pods-Bowling3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
