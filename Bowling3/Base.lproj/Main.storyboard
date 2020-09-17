@@ -351,7 +351,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="businessHours" textLabel="Na2-HG-cAp" detailTextLabel="Q2G-VW-gtx" style="IBUITableViewCellStyleValue1" id="jr0-ej-kXb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="businessHoursCell" textLabel="Na2-HG-cAp" detailTextLabel="Q2G-VW-gtx" style="IBUITableViewCellStyleValue1" id="jr0-ej-kXb">
                                         <rect key="frame" x="0.0" y="28" width="318" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jr0-ej-kXb" id="mlN-HP-SMw">
