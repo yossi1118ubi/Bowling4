@@ -29,44 +29,35 @@ class BusinessHoursViewController: UIViewController, UITableViewDataSource, UITa
     
     func getBusinessHours(){
         
-//        AF.request("https://www.round1.co.jp/shop/tenpo/shiga-hamaotsu.html").responseString{
-//            response in
-//
-//            print("\(response)")
-//        }
-        //スクレイピング対象のサイトを指定
-        AF.request("https://www.round1.co.jp/shop/tenpo/shiga-hamaotsu.html").responseString{
+        AF.request("https://www.round1.co.jp/shop/tenpo/shiga-hamaotsu.html").response{
             response in
             if let html = response.value{
-                if let doc = try? HTML(html: html, encoding: .utf8){
-                    print("動いてる")
-
-                    
-                    let xxx = doc.xpath("//table[@class='table_inline']")
-                    print("\(xxx)")
-                    //営業時間のリストのタイトルを取得
-                    var businessHourTitle = [String]()
-                    for link in doc.xpath("//table[@class='table_inline']/tbody/tr/th"){
-                        businessHourTitle.append(link.text ?? "")
-                        print("タイトル取れてる")
-                    }
-                    //営業時間を取得
+                if let doc = try? HTML(html: html!, encoding: .utf8){
+                    var businessHourTitle: [String] = []
                     var businessHourRange = [String]()
-//                    for link in doc.xpath("//table[@class='table_inline']/td[0]"){
-                    for link in doc.xpath("//table[@class='table_inline']/tbody/tr/th"){
-                        businessHourRange.append(link.text ?? "")
-                        print("営業時間取れてる")
+                    for i in (1...3){
+                        for link in doc.xpath("//*[@id='m_contents']/div[2]/div/table/tr[\(i)]/th"){
+                            print(link.text ?? "")
+                            businessHourTitle.append(link.text ?? "")
+                            
+                        }
                     }
-
-                    //配列に格納
-                    for (index, value) in businessHourTitle.enumerated(){
-                        let businessHour = BusinessHour()
-                        businessHour.title = value
-                        businessHour.range = businessHourRange[index]
-                        self.businesshours.append(businessHour)
-                        print("配列に格納してるよー")
+                    
+                    for i in (1...3){
+                        for link in doc.xpath("//*[@id='m_contents']/div[2]/div/table/tr[\(i)]/td"){
+                            print(link.text ?? "")
+                            businessHourRange.append(link.text ?? "")
+                        }
+                        
                     }
-
+                    
+                    
+                    for i in (0...2){
+                        let hours = BusinessHour()
+                        hours.title = businessHourTitle[i]
+                        hours.range = businessHourRange[i]
+                        self.businesshours.append(hours)
+                    }
                     self.tableView.reloadData()
 
                 }
